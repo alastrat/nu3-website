@@ -1,0 +1,327 @@
+{
+    "metadata": {
+        "title": "nu3 - Nutrition et accompagnement pour les familles en Colombie",
+        "description": "Fondation colombienne avec plus de 20 ans d'expérience transformant des vies grâce à la nutrition, l'éducation et l'accompagnement intégral des familles vulnérables."
+    },
+    "nav": {
+        "home": "Accueil",
+        "about": "Qui sommes-nous",
+        "programs": "Programmes",
+        "gardens": "Jardins productifs",
+        "units": "Unités productives",
+        "sponsor": "Parrainez",
+        "donate": "Faites un don",
+        "partners": "Entreprises",
+        "blog": "Actualités",
+        "contact": "Contact"
+    },
+    "cta": {
+        "donate": "Faites un don aujourd'hui",
+        "sponsor": "Parrainez une famille",
+        "explore": "Découvrez nos programmes",
+        "transform": "Je veux transformer une vie aujourd'hui",
+        "learnMore": "En savoir plus",
+        "contactUs": "Contactez-nous"
+    },
+    "hero": {
+        "slides": {
+            "slide1": {
+                "subtitle": "Ensemble nous changeons des vies",
+                "title": "Donner du pouvoir à l'espoir par le don",
+                "description": "Plus de 20 ans à transformer des vies grâce à la nutrition, l'éducation et l'accompagnement intégral des familles vulnérables en Colombie.",
+                "cta": "Faites un don maintenant"
+            },
+            "slide2": {
+                "subtitle": "Nutrition pour tous",
+                "title": "Construire des avenirs sains",
+                "description": "Des programmes intégraux qui garantissent une nutrition adéquate et un développement optimal pour les enfants, les mères et les personnes âgées.",
+                "cta": "Découvrez nos programmes"
+            },
+            "slide3": {
+                "subtitle": "Transformez une vie aujourd'hui",
+                "title": "Votre soutien fait la différence",
+                "description": "Avec votre parrainage mensuel, vous garantissez nutrition, éducation et accompagnement continu pour ceux qui en ont le plus besoin.",
+                "cta": "Parrainez maintenant"
+            }
+        }
+    },
+    "about": {
+        "title": "Qui sommes-nous",
+        "subtitle": "Une fondation colombienne engagée pour le bien-être nutritionnel",
+        "description": "Avec plus de 20 ans d'expérience, nous accompagnons les familles vulnérables grâce à notre Modèle d'Intervention 360° qui intègre nutrition, éducation, entrepreneuriat et employabilité.",
+        "mission": "Notre Mission",
+        "missionText": "Améliorer la qualité de vie des enfants, des femmes enceintes et des personnes âgées en situation de vulnérabilité grâce à des programmes intégraux de nutrition et d'accompagnement.",
+        "vision": "Notre Vision",
+        "visionText": "Être la fondation leader en Colombie dans la transformation des vies grâce à des modèles d'intervention nutritionnelle reproductibles et durables.",
+        "years": "Années d'expérience"
+    },
+    "units": {
+        "title": "Nos Unités Productives",
+        "subtitle": "Unités Productives",
+        "catering": {
+            "title": "Menu3 - Traiteur Social",
+            "description": "Traiteur à grande échelle avec impact social"
+        },
+        "bakery": {
+            "title": "Panu3 - Boulangerie Sociale",
+            "description": "Boulangerie industrielle de haute qualité"
+        },
+        "recycling": {
+            "title": "Outletnu3",
+            "description": "Modèle d'économie circulaire"
+        },
+        "sewing": {
+            "title": "Textinu3 - Atelier de Couture",
+            "description": "Couture et formation pour femmes"
+        }
+    },
+    "model360": {
+        "title": "Notre Modèle d'Intervention 360°",
+        "subtitle": "Une approche intégrale qui transforme des vies",
+        "description": "Nous travaillons avec les enfants, les femmes enceintes et allaitantes, et les personnes âgées grâce à un modèle éprouvé, mesurable et reproductible.",
+        "pillars": {
+            "nutrition": "Nutrition",
+            "education": "Éducation",
+            "entrepreneurship": "Entrepreneuriat",
+            "employability": "Employabilité"
+        }
+    },
+    "programs": {
+        "title": "Programmes de nutrition et d'accompagnement",
+        "subtitle": "Des solutions intégrales pour chaque étape de la vie",
+        "malnutrition": {
+            "title": "Prévention de la malnutrition",
+            "description": "Nous identifions et traitons les cas de malnutrition infantile grâce au dépistage nutritionnel, à une alimentation équilibrée et à un suivi continu."
+        },
+        "childhood": {
+            "title": "Nutrition de la petite enfance",
+            "description": "Nous assurons le développement optimal des enfants de moins de 5 ans avec une alimentation appropriée et une stimulation précoce."
+        },
+        "mothers": {
+            "title": "Accompagnement intégral des femmes enceintes et allaitantes",
+            "description": "Nous accompagnons les mères pendant la grossesse et l'allaitement avec nutrition, soutien psychosocial et formation aux droits."
+        },
+        "elderly": {
+            "title": "Soutien aux personnes âgées",
+            "description": "Nous assurons un état nutritionnel adéquat pour les personnes âgées, améliorant leur qualité de vie et leur bien-être."
+        }
+    },
+    "gardens": {
+        "title": "Jardins productifs et sécurité alimentaire",
+        "subtitle": "Cultiver des Âmes - Semer l'espoir, récolter l'avenir",
+        "description": "Nous formons les familles à la culture de fruits et légumes, favorisant la sécurité alimentaire et la génération de revenus."
+    },
+    "units": {
+        "title": "Unités productives avec un sens",
+        "subtitle": "Des entreprises sociales qui transforment des vies",
+        "catering": {
+            "title": "Traiteur social",
+            "description": "Cuisine à grande échelle qui génère des emplois pour les mères bénéficiaires et réinvestit dans nos Centres Intégraux."
+        },
+        "bakery": {
+            "title": "Boulangerie industrielle",
+            "description": "Production de pain et de produits de boulangerie à impact social, générant des opportunités d'emploi."
+        },
+        "sewing": {
+            "title": "Confection et formation",
+            "description": "Formation en confection pour les femmes, renforçant l'employabilité et la génération de revenus."
+        },
+        "recycling": {
+            "title": "Récupération de biens",
+            "description": "Nous recevons et vendons des dons de vêtements et de biens, réinvestissant dans les programmes sociaux."
+        }
+    },
+    "sponsor": {
+        "title": "Parrainez une vie",
+        "subtitle": "Votre soutien constant transforme les réalités",
+        "description": "Avec votre parrainage mensuel, vous garantissez nutrition, éducation et accompagnement continu pour ceux qui en ont le plus besoin.",
+        "types": {
+            "child": "Enfant",
+            "adolescent": "Adolescent",
+            "mother": "Femme enceinte ou allaitante",
+            "elderly": "Personne âgée"
+        }
+    },
+    "donations": {
+        "section": {
+            "subtitle": "Aidez et faites un don",
+            "title": "Inspirer et aider pour un meilleur mode de vie"
+        },
+        "activeDonors": "Donateurs actifs",
+        "items": {
+            "prevencion-desnutricion": {
+                "title": "Prévention de la malnutrition chez les enfants colombiens",
+                "description": "Nous travaillons ensemble pour faire une différence durable, aidant les gens avec gentillesse et travail acharné"
+            },
+            "primera-infancia": {
+                "title": "Soins nutritionnels pour la petite enfance",
+                "description": "Nous assurons un développement optimal pour les enfants de moins de 5 ans avec une nutrition adéquate"
+            },
+            "madres-gestantes": {
+                "title": "Accompagnement intégral des femmes enceintes et allaitantes",
+                "description": "Nous accompagnons les mères dans leur parcours avec nutrition et éducation aux droits"
+            },
+            "adultos-mayores": {
+                "title": "Programme de nutrition pour les personnes âgées",
+                "description": "Nous assurons un état nutritionnel adéquat améliorant la qualité de vie"
+            },
+            "huertas-productivas": {
+                "title": "Jardins productifs - Sécurité alimentaire",
+                "description": "Nous formons les familles à la culture promouvant la sécurité alimentaire"
+            }
+        }
+    },
+    "donation": {
+        "title": "Faites un don et transformez des vies",
+        "subtitle": "Chaque contribution compte",
+        "description": "Votre don devient nourriture nutritive, programmes d'éducation et accompagnement pour les familles vulnérables.",
+        "oneTime": "Don unique",
+        "monthly": "Don mensuel",
+        "corporate": "Don d'entreprise"
+    },
+    "volunteer": {
+        "title": "Devenez bénévole",
+        "description": "Votre temps et votre talent peuvent transformer la vie de centaines de familles. Rejoignez notre équipe et faites partie du changement dont la Colombie a besoin.",
+        "list": [
+            "Donnez votre temps",
+            "Partagez vos compétences",
+            "Ayez un impact positif"
+        ],
+        "cta": "Devenez bénévole",
+        "donate": {
+            "title": "Envoyez un cadeau pour les enfants",
+            "description": "Chaque don se traduit par de la nutrition, de l'éducation et de l'espoir pour les enfants et les familles qui en ont le plus besoin.",
+            "customAmount": "Montant personnalisé",
+            "cta": "Donnez maintenant"
+        }
+    },
+    "partners": {
+        "title": "Entreprises et alliés",
+        "subtitle": "Ensemble pour une Colombie mieux nourrie",
+        "description": "Nous développons des partenariats stratégiques avec des entreprises engagées dans la responsabilité sociale et les Objectifs de Développement Durable."
+    },
+    "impact": {
+        "title": "Notre impact",
+        "subtitle": "Des résultats qui parlent d'eux-mêmes",
+        "families": "Familles accompagnées",
+        "children": "Enfants pris en charge",
+        "meals": "Repas servis",
+        "years": "Années d'expérience"
+    },
+    "events": {
+        "section": {
+            "subtitle": "Événements à venir",
+            "title": "Calendrier des événements nu3",
+            "viewAll": "Voir tous les événements"
+        },
+        "items": {
+            "jornada-nutricional-2024": {
+                "title": "Journée d'évaluation nutritionnelle et de suivi",
+                "description": "Évaluation nutritionnelle gratuite pour les enfants et les familles vulnérables. Comprend une consultation personnalisée et un plan alimentaire."
+            },
+            "taller-huertas-productivas": {
+                "title": "Atelier pratique sur les jardins productifs",
+                "description": "Apprenez les techniques d'agriculture biologique et comment cultiver des aliments nutritifs pour votre famille."
+            },
+            "capacitacion-madres-lactantes": {
+                "title": "Formation pour les femmes enceintes et allaitantes",
+                "description": "Session d'information sur la nutrition pendant la grossesse et l'allaitement, les soins du bébé et les droits."
+            },
+            "feria-alimentos-saludables": {
+                "title": "Foire des aliments sains et recettes nutritives",
+                "description": "Présentation de plats nutritifs, recettes économiques et conseils pour une alimentation équilibrée."
+            }
+        }
+    },
+    "team": {
+        "section": {
+            "subtitle": "Notre équipe",
+            "title": "Professionnels dédiés à transformer des vies",
+            "joinUs": "Rejoignez-nous"
+        },
+        "members": {
+            "maria-gonzalez": {
+                "name": "María González",
+                "role": "Directrice Exécutive"
+            },
+            "carlos-rodriguez": {
+                "name": "Carlos Rodríguez",
+                "role": "Coordinateur de Programmes"
+            },
+            "ana-martinez": {
+                "name": "Ana Martínez",
+                "role": "Nutritionniste en Chef"
+            },
+            "juan-lopez": {
+                "name": "Juan López",
+                "role": "Coordinateur des Bénévoles"
+            }
+        }
+    },
+    "testimonials": {
+        "section": {
+            "subtitle": "Aidez et faites un don",
+            "title": "Inspirer et aider pour un meilleur mode de vie"
+        },
+        "items": {
+            "testimonial1": {
+                "text": "Grâce à nu3, mon fils a repris du poids et est maintenant en bonne santé et heureux. Le soutien a été fondamental pour notre famille.",
+                "name": "Andrea Pérez",
+                "role": "Mère bénéficiaire"
+            },
+            "testimonial2": {
+                "text": "Le programme de jardins productifs a changé notre vie. Nous cultivons maintenant nos propres aliments et générons des revenus.",
+                "name": "Pedro Morales",
+                "role": "Bénéficiaire du programme jardins"
+            },
+            "testimonial3": {
+                "text": "En tant qu'entreprise, nous avons trouvé en nu3 un allié transparent et engagé. Voir l'impact direct de nos dons est inspirant.",
+                "name": "Laura Jiménez",
+                "role": "Directrice RSE Entreprise Alliée"
+            },
+            "testimonial4": {
+                "text": "Le soutien pendant ma grossesse a été inestimable. J'ai reçu de la nutrition, de la formation et beaucoup d'amour de l'équipe nu3.",
+                "name": "Carolina Ruiz",
+                "role": "Femme enceinte"
+            },
+            "testimonial5": {
+                "text": "Être bénévole chez nu3 m'a permis de contribuer avec mes compétences et de faire partie d'une véritable transformation dans ma communauté.",
+                "name": "David Torres",
+                "role": "Bénévole"
+            }
+        }
+    },
+    "blog": {
+        "title": "Actualités",
+        "subtitle": "Restez informé de notre travail",
+        "readMore": "Lire la suite",
+        "categories": {
+            "nutrition": "Nutrition infantile",
+            "breastfeeding": "Allaitement et maternité",
+            "gardens": "Sécurité alimentaire",
+            "impact": "Histoires d'impact",
+            "partnerships": "Partenariats et reconnaissances"
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Nous sommes là pour vous écouter",
+        "description": "Vous avez des questions sur nos programmes ou vous voulez faire partie du changement ? Écrivez-nous.",
+        "form": {
+            "name": "Nom complet",
+            "email": "E-mail",
+            "phone": "Téléphone",
+            "subject": "Sujet",
+            "message": "Message",
+            "submit": "Envoyer le message"
+        }
+    },
+    "footer": {
+        "description": "Fondation colombienne avec plus de 20 ans d'expérience transformant des vies grâce à la nutrition et à l'accompagnement intégral.",
+        "quickLinks": "Liens rapides",
+        "programs": "Nos programmes",
+        "contact": "Contact",
+        "followUs": "Suivez-nous",
+        "rights": "Tous droits réservés"
+    }
+}
