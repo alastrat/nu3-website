@@ -1,14 +1,15 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import Image from 'next/image';
 import { Heart, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const quickLinks = [
     { href: '/quienes-somos', key: 'about' },
     { href: '/programas', key: 'programs' },
+    { href: '/proyectos', key: 'projects' },
     { href: '/apadrina', key: 'sponsor' },
     { href: '/dona', key: 'donate' },
-    { href: '/empresas', key: 'partners' },
     { href: '/contacto', key: 'contact' },
 ] as const;
 
@@ -17,7 +18,6 @@ const programLinks = [
     { href: '/programas/primera-infancia', label: 'Primera infancia' },
     { href: '/programas/madres-gestantes', label: 'Madres gestantes' },
     { href: '/programas/adultos-mayores', label: 'Adultos mayores' },
-    { href: '/huertas-productivas', label: 'Huertas productivas' },
 ] as const;
 
 const socialLinks = [
@@ -38,11 +38,14 @@ export function Footer() {
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                     {/* Brand column */}
                     <div className="space-y-4">
-                        <Link href="/" className="flex items-center gap-2">
-                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                                <span className="text-lg font-bold text-primary-foreground">nu3</span>
-                            </div>
-                            <span className="text-xl font-bold">Fundación nu3</span>
+                        <Link href="/" className="inline-block">
+                            <Image
+                                src="/images/nu3-logo-white.png"
+                                alt="Fundación nu3"
+                                width={180}
+                                height={54}
+                                className="h-auto w-auto"
+                            />
                         </Link>
                         <p className="text-sm text-background/80">
                             {t('description')}
@@ -104,18 +107,18 @@ export function Footer() {
                         <ul className="space-y-3">
                             <li className="flex items-start gap-3 text-sm text-background/80">
                                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                                <span>Bogotá, Colombia</span>
+                                <span>Cra. 9E #137-21, Suroccidente, Barranquilla, Atlántico</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm text-background/80">
                                 <Phone className="h-4 w-4 flex-shrink-0" />
-                                <a href="tel:+5718000000" className="hover:text-primary">
-                                    +57 1 800 0000
+                                <a href="tel:+573183309385" className="hover:text-primary">
+                                    +57 318 330 9385
                                 </a>
                             </li>
                             <li className="flex items-center gap-3 text-sm text-background/80">
                                 <Mail className="h-4 w-4 flex-shrink-0" />
-                                <a href="mailto:info@nu3.co" className="hover:text-primary">
-                                    info@nu3.co
+                                <a href="mailto:comunicaciones@nu3.org.co" className="hover:text-primary">
+                                    comunicaciones@nu3.org.co
                                 </a>
                             </li>
                         </ul>

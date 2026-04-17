@@ -11,9 +11,9 @@ const ctaButtonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-[#EB5310] text-white border-[#EB5310] hover:bg-transparent hover:text-[#EB5310]",
-        white: "bg-white text-[#1E252F] border-white hover:bg-transparent hover:text-white",
-        outline: "bg-transparent text-white border-white hover:bg-white hover:text-[#1E252F]",
+        primary: "bg-primary text-primary-foreground border-primary hover:bg-transparent hover:text-primary",
+        white: "bg-white text-foreground border-white hover:bg-transparent hover:text-white",
+        outline: "bg-transparent text-white border-white hover:bg-white hover:text-foreground",
       },
       size: {
         default: "px-8 py-4 text-lg",
@@ -40,13 +40,13 @@ const CtaButton = React.forwardRef<HTMLButtonElement, CtaButtonProps>(
     const getIconStyles = () => {
       switch (variant) {
         case 'primary':
-          return "bg-white text-[#EB5310] group-hover:bg-[#EB5310] group-hover:text-white";
+          return "bg-white text-primary group-hover:bg-primary group-hover:text-white";
         case 'white':
-          return "bg-[#EB5310] text-white group-hover:bg-white group-hover:text-[#EB5310]";
+          return "bg-primary text-white group-hover:bg-white group-hover:text-primary";
         case 'outline':
-          return "bg-white text-[#EB5310] group-hover:bg-[#EB5310] group-hover:text-white";
+          return "bg-white text-primary group-hover:bg-primary group-hover:text-white";
         default:
-          return "bg-white text-[#EB5310]";
+          return "bg-white text-primary";
       }
     };
     

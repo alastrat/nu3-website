@@ -20,7 +20,7 @@ export function AboutSection() {
                             <div className="ul-about-imgs ul-about-2-img relative">
                                 <div className="img-wrapper relative aspect-4/5 overflow-hidden rounded-[999px] rounded-bl-none">
                                     <Image
-                                        src="/images/about-2-img.jpg"
+                                        src="/images/real_images/Portada-Editorialesnu3-1.png"
                                         alt="About nu3"
                                         fill
                                         className="object-cover"
@@ -95,7 +95,7 @@ export function AboutSection() {
                 }
 
                 .ul-about-2-stat {
-                    background-color: #EB5310;
+                    background-color: oklch(from var(--primary) l c h);
                     color: white;
                     text-align: center;
                     position: absolute;
@@ -105,7 +105,7 @@ export function AboutSection() {
                     right: -20px;
                     border-radius: clamp(15px, 1.05vw, 20px);
                     min-width: clamp(180px, 15vw, 280px);
-                    box-shadow: 0 10px 30px rgba(235, 83, 16, 0.3);
+                    box-shadow: 0 10px 30px oklch(from var(--primary) l c h / 0.3);
                     z-index: 2;
                 }
 
@@ -126,7 +126,7 @@ export function AboutSection() {
                 }
 
                 .ul-section-sub-title {
-                    color: #EB5310;
+                    color: oklch(from var(--primary) l c h);
                     display: inline-block;
                     letter-spacing: -0.03em;
                     font-weight: 600;
@@ -141,7 +141,7 @@ export function AboutSection() {
                     content: "";
                     width: clamp(9px, 0.63vw, 12px);
                     aspect-ratio: 12/13;
-                    background-color: #EB5310;
+                    background-color: oklch(from var(--primary) l c h);
                     display: inline-block;
                     margin-right: clamp(5px, 0.42vw, 8px);
                     clip-path: polygon(50% 100%, 0 0, 100% 0);

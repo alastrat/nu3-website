@@ -68,7 +68,7 @@ export function DonationCard({
                 {/* Title */}
                 <Link
                     href={`/dona/${slug}` as any}
-                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-nu3-orange transition-colors line-clamp-2"
+                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-primary transition-colors line-clamp-2"
                 >
                     {title}
                 </Link>
@@ -79,7 +79,7 @@ export function DonationCard({
                 {/* CTA Button */}
                 <Link
                     href={`/dona/${slug}` as any}
-                    className="inline-flex items-center gap-2 text-nu3-orange font-semibold hover:gap-3 transition-all group"
+                    className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group"
                 >
                     Donar ahora
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

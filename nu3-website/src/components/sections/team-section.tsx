@@ -6,46 +6,66 @@ import { Link } from '@/i18n/routing';
 const DEMO_TEAM = [
     {
         id: '1',
-        slug: 'maria-gonzalez',
-        image: '/images/member-1.jpg',
+        slug: 'monica-schraer',
+        image: '/images/real_images/team/monica-schraer.jpg',
         socials: {
-            facebook: '#',
-            twitter: '#',
             linkedin: '#',
-            instagram: '#',
         },
     },
     {
         id: '2',
-        slug: 'carlos-rodriguez',
-        image: '/images/member-2.jpg',
+        slug: 'francis-zylberblum',
+        image: '/images/real_images/team/francis-zylberblum.jpg',
         socials: {
-            facebook: '#',
-            twitter: '#',
             linkedin: '#',
-            instagram: '#',
         },
     },
     {
         id: '3',
-        slug: 'ana-martinez',
-        image: '/images/member-3.jpg',
+        slug: 'paola-davila',
+        image: '/images/real_images/team/paola-davila.jpg',
         socials: {
-            facebook: '#',
-            twitter: '#',
             linkedin: '#',
-            instagram: '#',
         },
     },
     {
         id: '4',
-        slug: 'juan-lopez',
-        image: '/images/member-4.jpg',
+        slug: 'jeison-rodriguez',
+        image: '/images/real_images/team/jeison-rodriguez.jpg',
         socials: {
-            facebook: '#',
-            twitter: '#',
             linkedin: '#',
-            instagram: '#',
+        },
+    },
+    {
+        id: '5',
+        slug: 'sandra-buelvas',
+        image: '/images/real_images/team/sandra-buelvas.jpg',
+        socials: {
+            linkedin: '#',
+        },
+    },
+    {
+        id: '6',
+        slug: 'daniel-villadiego',
+        image: '/images/real_images/team/daniel-villadiego.jpg',
+        socials: {
+            linkedin: '#',
+        },
+    },
+    {
+        id: '7',
+        slug: 'dubis-barrios',
+        image: '/images/real_images/team/dubis-barrios.jpg',
+        socials: {
+            linkedin: '#',
+        },
+    },
+    {
+        id: '8',
+        slug: 'marcela-ortega',
+        image: '/images/real_images/team/marcela-ortega.jpg',
+        socials: {
+            linkedin: '#',
         },
     },
 ];
@@ -59,7 +79,7 @@ export function TeamSection() {
                 {/* Heading */}
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12">
                     <div className="flex-1">
-                        <span className="inline-block px-4 py-2 bg-nu3-green/10 text-nu3-green rounded-full text-sm font-semibold mb-4">
+                        <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold mb-4">
                             {t('team.section.subtitle')}
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
@@ -69,7 +89,7 @@ export function TeamSection() {
 
                     <Link
                         href="/equipo"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-nu3-orange text-white rounded-full font-semibold hover:bg-nu3-orange-dark transition-colors group"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-colors group"
                     >
                         <Users className="w-4 h-4" />
                         {t('team.section.joinUs')}

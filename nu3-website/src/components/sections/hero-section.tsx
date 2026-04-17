@@ -16,7 +16,7 @@ import 'swiper/css/thumbs';
 const HERO_SLIDES = [
     {
         id: 1,
-        image: '/images/banner-2-slide-1.jpg',
+        image: '/images/real_images/1.png',
         subtitle: 'hero.slides.slide1.subtitle',
         title: 'hero.slides.slide1.title',
         description: 'hero.slides.slide1.description',
@@ -25,7 +25,7 @@ const HERO_SLIDES = [
     },
     {
         id: 2,
-        image: '/images/banner-2-slide-2.jpg',
+        image: '/images/real_images/383A8599-scaled.jpg',
         subtitle: 'hero.slides.slide2.subtitle',
         title: 'hero.slides.slide2.title',
         description: 'hero.slides.slide2.description',
@@ -34,7 +34,7 @@ const HERO_SLIDES = [
     },
     {
         id: 3,
-        image: '/images/banner-2-slide-3.jpg',
+        image: '/images/real_images/BANNER-2.jpg',
         subtitle: 'hero.slides.slide3.subtitle',
         title: 'hero.slides.slide3.title',
         description: 'hero.slides.slide3.description',
@@ -96,7 +96,7 @@ export function HeroSection() {
                                                 {/* CTA Button */}
                                                 <Link
                                                     href={slide.ctaLink}
-                                                    className="inline-flex items-center gap-3 px-8 py-4 bg-nu3-orange text-white rounded-full font-bold text-lg hover:bg-nu3-orange-dark transition-all shadow-lg hover:shadow-xl group"
+                                                    className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl group"
                                                 >
                                                     <ArrowRight className="w-5 h-5" />
                                                     {t(slide.cta)}
@@ -116,7 +116,7 @@ export function HeroSection() {
                         <div className="flex items-center gap-4 py-4">
                             {/* Previous Button */}
                             <button
-                                className="hero-prev w-12 h-12 flex-shrink-0 rounded-lg bg-gray-100 hover:bg-nu3-orange hover:text-white transition-all flex items-center justify-center"
+                                className="hero-prev w-12 h-12 flex-shrink-0 rounded-lg bg-gray-100 hover:bg-primary hover:text-white transition-all flex items-center justify-center"
                                 aria-label="Previous"
                             >
                                 <ChevronLeft className="w-6 h-6" />
@@ -152,7 +152,7 @@ export function HeroSection() {
 
                             {/* Next Button */}
                             <button
-                                className="hero-next w-12 h-12 flex-shrink-0 rounded-lg bg-gray-100 hover:bg-nu3-orange hover:text-white transition-all flex items-center justify-center"
+                                className="hero-next w-12 h-12 flex-shrink-0 rounded-lg bg-gray-100 hover:bg-primary hover:text-white transition-all flex items-center justify-center"
                                 aria-label="Next"
                             >
                                 <ChevronRight className="w-6 h-6" />

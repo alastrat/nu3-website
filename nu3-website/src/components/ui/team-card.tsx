@@ -37,7 +37,7 @@ export function TeamCard({ slug, name, role, image, socials }: TeamCardProps) {
                                     href={socials.facebook}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-nu3-orange transition-colors"
+                                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-colors"
                                     aria-label="Facebook"
                                 >
                                     <Facebook className="w-5 h-5" />
@@ -48,7 +48,7 @@ export function TeamCard({ slug, name, role, image, socials }: TeamCardProps) {
                                     href={socials.twitter}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-nu3-orange transition-colors"
+                                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-colors"
                                     aria-label="Twitter"
                                 >
                                     <Twitter className="w-5 h-5" />
@@ -59,7 +59,7 @@ export function TeamCard({ slug, name, role, image, socials }: TeamCardProps) {
                                     href={socials.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-nu3-orange transition-colors"
+                                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-colors"
                                     aria-label="LinkedIn"
                                 >
                                     <Linkedin className="w-5 h-5" />
@@ -70,7 +70,7 @@ export function TeamCard({ slug, name, role, image, socials }: TeamCardProps) {
                                     href={socials.instagram}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-nu3-orange transition-colors"
+                                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-colors"
                                     aria-label="Instagram"
                                 >
                                     <Instagram className="w-5 h-5" />
@@ -85,7 +85,7 @@ export function TeamCard({ slug, name, role, image, socials }: TeamCardProps) {
             <div className="text-center">
                 <Link
                     href={`/equipo/${slug}` as any}
-                    className="block text-xl font-bold text-gray-900 hover:text-nu3-orange transition-colors mb-1"
+                    className="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-1"
                 >
                     {name}
                 </Link>

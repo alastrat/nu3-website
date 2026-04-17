@@ -16,7 +16,7 @@ import 'swiper/css/thumbs';
 const HERO_SLIDES = [
     {
         id: 1,
-        image: '/images/banner-2-slide-1.jpg',
+        image: '/images/real_images/1.png',
         subtitle: 'hero.slides.slide1.subtitle',
         title: 'hero.slides.slide1.title',
         description: 'hero.slides.slide1.description',
@@ -25,7 +25,7 @@ const HERO_SLIDES = [
     },
     {
         id: 2,
-        image: '/images/banner-2-slide-2.jpg',
+        image: '/images/real_images/nu3-banner-2024.jpg',
         subtitle: 'hero.slides.slide2.subtitle',
         title: 'hero.slides.slide2.title',
         description: 'hero.slides.slide2.description',
@@ -34,7 +34,7 @@ const HERO_SLIDES = [
     },
     {
         id: 3,
-        image: '/images/banner-2-slide-3.jpg',
+        image: '/images/real_images/BANNER-2.jpg',
         subtitle: 'hero.slides.slide3.subtitle',
         title: 'hero.slides.slide3.title',
         description: 'hero.slides.slide3.description',
@@ -220,7 +220,7 @@ export function HeroSection2() {
                 .hero-slide-overlay {
                     position: absolute;
                     inset: 0;
-                    background: linear-gradient(102deg, rgba(235, 83, 16, 0.9) 2%, rgba(235, 83, 16, 0.1) 99%);
+                    background: linear-gradient(102deg, oklch(from var(--primary) l c h / 0.9) 2%, oklch(from var(--primary) l c h / 0.1) 99%);
                     z-index: 1;
                 }
                 
@@ -358,7 +358,7 @@ export function HeroSection2() {
                 .hero-thumbs-swiper .swiper-slide-thumb-active .hero-thumb-img {
                     opacity: 1;
                     transform: scale(1.15);
-                    border-color: #EB5310;
+                    border-color: oklch(from var(--primary) l c h);
                 }
             `}</style>
         </section>

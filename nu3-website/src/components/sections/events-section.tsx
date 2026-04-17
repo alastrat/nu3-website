@@ -9,30 +9,30 @@ const DEMO_EVENTS = [
     {
         id: '1',
         slug: 'jornada-nutricional-2024',
-        image: '/images/event-img.jpg',
+        image: '/images/real_images/evento-auditorio.jpg',
         date: { day: '15', month: 'Feb' },
-        venue: 'Centro Integral nu3, Bogotá, Colombia',
+        venue: 'Centro Integral nu3, Barranquilla, Colombia',
     },
     {
         id: '2',
         slug: 'taller-huertas-productivas',
-        image: '/images/blog-b-1.jpg',
+        image: '/images/real_images/HUERTA_BANNER.jpg',
         date: { day: '22', month: 'Feb' },
-        venue: 'Sede Soacha, Cundinamarca, Colombia',
+        venue: 'Sede Atlántico, Colombia',
     },
     {
         id: '3',
         slug: 'capacitacion-madres-lactantes',
-        image: '/images/blog-2.jpg',
+        image: '/images/real_images/madresgestantes-1.jpg',
         date: { day: '28', month: 'Feb' },
-        venue: 'Centro Integral nu3, Bogotá, Colombia',
+        venue: 'Centro Integral nu3, Barranquilla, Colombia',
     },
     {
         id: '4',
         slug: 'feria-alimentos-saludables',
-        image: '/images/blog-b-3.jpg',
+        image: '/images/real_images/Primera-Infancia.jpg',
         date: { day: '05', month: 'Mar' },
-        venue: 'Plaza Central, Bogotá, Colombia',
+        venue: 'Plaza Central, Barranquilla, Colombia',
     },
 ];
 
@@ -43,15 +43,15 @@ export function EventsSection() {
         <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
             {/* Background decorations */}
             <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-nu3-orange rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-nu3-green rounded-full blur-3xl" />
+                <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary rounded-full blur-3xl" />
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Heading */}
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12">
                     <div className="flex-1">
-                        <span className="inline-block px-4 py-2 bg-nu3-orange/20 text-nu3-orange rounded-full text-sm font-semibold mb-4">
+                        <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-semibold mb-4">
                             {t('events.section.subtitle')}
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">

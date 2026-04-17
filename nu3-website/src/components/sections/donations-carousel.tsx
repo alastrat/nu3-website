@@ -18,7 +18,7 @@ const DEMO_DONATIONS = [
     {
         id: '1',
         slug: 'prevencion-desnutricion',
-        image: '/images/donation-1.jpg',
+        image: '/images/real_images/Prevencion-de-la-desnutricion-y-recuperacion-nutricional.jpg',
         tag: 'Nutrición',
         raised: 25000,
         goal: 30000,
@@ -26,7 +26,7 @@ const DEMO_DONATIONS = [
     {
         id: '2',
         slug: 'primera-infancia',
-        image: '/images/donation-2.jpg',
+        image: '/images/real_images/Primera-Infancia.jpg',
         tag: 'Educación',
         raised: 28500,
         goal: 30000,
@@ -34,7 +34,7 @@ const DEMO_DONATIONS = [
     {
         id: '3',
         slug: 'madres-gestantes',
-        image: '/images/donation-3.jpg',
+        image: '/images/real_images/madresgestantes-1.jpg',
         tag: 'Salud',
         raised: 15000,
         goal: 30000,
@@ -42,7 +42,7 @@ const DEMO_DONATIONS = [
     {
         id: '4',
         slug: 'adultos-mayores',
-        image: '/images/donation-4.jpg',
+        image: '/images/real_images/ADULTOMAYOR.jpg',
         tag: 'Apoyo',
         raised: 19200,
         goal: 30000,
@@ -50,7 +50,7 @@ const DEMO_DONATIONS = [
     {
         id: '5',
         slug: 'huertas-productivas',
-        image: '/images/donation-1.jpg',
+        image: '/images/real_images/HUERTA_BANNER.jpg',
         tag: 'Emprendimiento',
         raised: 24000,
         goal: 30000,
@@ -74,7 +74,7 @@ export function DonationsCarousel({ locale }: DonationsCarouselProps) {
                 {/* Heading */}
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12">
                     <div className="flex-1">
-                        <span className="inline-block px-4 py-2 bg-nu3-orange/10 text-nu3-orange rounded-full text-sm font-semibold mb-4">
+                        <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
                             {t('donations.section.subtitle')}
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -87,15 +87,15 @@ export function DonationsCarousel({ locale }: DonationsCarouselProps) {
                         <div className="flex items-center gap-3">
                             <div className="flex items-center -space-x-2">
                                 <div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                                    <Image src="/images/user-1.png" alt="Donor" fill className="object-cover" />
+                                    <Image src="/images/reviewer-new-1.jpg" alt="Donor" fill className="object-cover" />
                                 </div>
                                 <div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                                    <Image src="/images/user-2.png" alt="Donor" fill className="object-cover" />
+                                    <Image src="/images/reviewer-new-2.jpg" alt="Donor" fill className="object-cover" />
                                 </div>
                                 <div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                                    <Image src="/images/user-3.png" alt="Donor" fill className="object-cover" />
+                                    <Image src="/images/reviewer-new-3.jpg" alt="Donor" fill className="object-cover" />
                                 </div>
-                                <div className="w-10 h-10 rounded-full border-2 border-white bg-nu3-orange flex items-center justify-center text-white font-bold text-sm">
+                                <div className="w-10 h-10 rounded-full border-2 border-white bg-primary flex items-center justify-center text-white font-bold text-sm">
                                     2M
                                 </div>
                             </div>
@@ -107,13 +107,13 @@ export function DonationsCarousel({ locale }: DonationsCarouselProps) {
                         {/* Navigation Buttons */}
                         <div className="flex gap-2">
                             <button
-                                className="swiper-donations-prev w-12 h-12 rounded-full border-2 border-gray-200 hover:border-nu3-orange hover:bg-nu3-orange hover:text-white transition-all flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="swiper-donations-prev w-12 h-12 rounded-full border-2 border-gray-200 hover:border-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                                 aria-label="Previous donation"
                             >
                                 <ChevronLeft className="w-5 h-5" />
                             </button>
                             <button
-                                className="swiper-donations-next w-12 h-12 rounded-full border-2 border-gray-200 hover:border-nu3-orange hover:bg-nu3-orange hover:text-white transition-all flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="swiper-donations-next w-12 h-12 rounded-full border-2 border-gray-200 hover:border-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                                 aria-label="Next donation"
                             >
                                 <ChevronRight className="w-5 h-5" />

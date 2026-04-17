@@ -33,31 +33,16 @@ export function TestimonialsCarousel() {
                     {/* card */}
                     <div className="testimonials-col-md-4">
                         <div className="ul-testimonial-2-overview">
-                            <span className="rating">4.9</span>
+                            <span className="rating">{t('overview.title')}</span>
                             <div className="ul-testimonial-2-overview-stars flex justify-center gap-1">
                                 {[1, 2, 3, 4].map((i) => (
                                     <Star key={i} className="w-5 h-5 fill-current" />
                                 ))}
                                 <Star className="w-5 h-5 fill-current opacity-50" />
                             </div>
-                            <span className="ul-testimonial-2-overview-title">5 Start Rating</span>
                             <p className="ul-testimonial-2-overview-descr">
-                                Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.
+                                {t('overview.description')}
                             </p>
-                            <div className="ul-testimonial-2-overview-reviewers flex justify-center mt-6">
-                                <div className="reviewer-img-wrapper">
-                                    <Image src="/images/reviewer-1.png" alt="Reviewer" width={70} height={70} />
-                                </div>
-                                <div className="reviewer-img-wrapper">
-                                    <Image src="/images/reviewer-2.png" alt="Reviewer" width={70} height={70} />
-                                </div>
-                                <div className="reviewer-img-wrapper">
-                                    <Image src="/images/reviewer-3.png" alt="Reviewer" width={70} height={70} />
-                                </div>
-                                <div className="reviewer-img-wrapper">
-                                    <Image src="/images/reviewer-4.png" alt="Reviewer" width={70} height={70} />
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -91,7 +76,7 @@ export function TestimonialsCarousel() {
                                                 <div className="ul-review-reviewer flex items-center gap-4">
                                                     <div className="reviewer-image relative w-[70px] h-[70px] rounded-full overflow-hidden">
                                             <Image
-                                                            src={`/images/reviewer-${(index % 4) + 1}.png`}
+                                                            src={`/images/reviewer-new-${(index % 4) + 1}.jpg`}
                                                             alt={t(`items.${key}.name`)}
                                                 fill
                                                 className="object-cover"
@@ -109,10 +94,10 @@ export function TestimonialsCarousel() {
                 </Swiper>
 
                             <div className="ul-testimonial-2-slider-nav flex gap-4 absolute bottom-0 right-0 z-10 bg-white">
-                                <button className="ul-testimonial-2-prev w-[50px] h-[50px] border border-black rounded-full flex items-center justify-center hover:bg-[#EB5310] hover:border-[#EB5310] hover:text-white transition-all">
+                                <button className="ul-testimonial-2-prev w-[50px] h-[50px] border border-black rounded-full flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all">
                                     <ChevronLeft className="w-6 h-6" />
                                 </button>
-                                <button className="ul-testimonial-2-next w-[50px] h-[50px] border border-black rounded-full flex items-center justify-center hover:bg-[#EB5310] hover:border-[#EB5310] hover:text-white transition-all">
+                                <button className="ul-testimonial-2-next w-[50px] h-[50px] border border-black rounded-full flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all">
                                     <ChevronRight className="w-6 h-6" />
                                 </button>
                             </div>
@@ -144,7 +129,7 @@ export function TestimonialsCarousel() {
                 }
 
                 .ul-section-sub-title {
-                    color: #EB5310;
+                    color: oklch(from var(--primary) l c h);
                     display: inline-block;
                     letter-spacing: -0.03em;
                     font-weight: 500;
@@ -157,7 +142,7 @@ export function TestimonialsCarousel() {
                     content: "";
                     width: clamp(9px, 0.63vw, 12px);
                     aspect-ratio: 12/13;
-                    background-color: #EB5310;
+                    background-color: oklch(from var(--primary) l c h);
                     display: inline-block;
                     margin-right: clamp(5px, 0.42vw, 8px);
                     clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -184,10 +169,10 @@ export function TestimonialsCarousel() {
 
                 .rating {
                     display: block;
-                    font-size: clamp(55px, 4.2vw, 80px);
+                    font-size: clamp(32px, 2.5vw, 48px);
                     font-weight: 700;
                     font-family: var(--font-quicksand);
-                    line-height: 0.7;
+                    line-height: 1.2;
                     margin-bottom: clamp(15px, 1.58vw, 30px);
                     color: #1E252F;
                 }
@@ -195,7 +180,7 @@ export function TestimonialsCarousel() {
                 .ul-testimonial-2-overview-stars {
                     font-size: clamp(20px, 1.31vw, 25px);
                     color: #FFA31A;
-                    margin-bottom: 4px;
+                    margin-bottom: clamp(15px, 1.16vw, 22px);
                 }
 
                 .ul-testimonial-2-overview-title {
@@ -207,21 +192,7 @@ export function TestimonialsCarousel() {
 
                 .ul-testimonial-2-overview-descr {
                     color: #4B5563;
-                    margin-bottom: clamp(20px, 2.1vw, 40px);
                     line-height: 1.6;
-                }
-
-                .ul-testimonial-2-overview-reviewers .reviewer-img-wrapper {
-                    width: clamp(60px, 3.68vw, 70px);
-                    aspect-ratio: 1/1;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    margin-left: calc(0% - clamp(18px, 1.31vw, 25px));
-                    border: 2px solid #F5F0E2;
-                }
-
-                .ul-testimonial-2-overview-reviewers .reviewer-img-wrapper:first-child {
-                    margin-left: 0;
                 }
 
                 /* Slider */
@@ -236,7 +207,7 @@ export function TestimonialsCarousel() {
 
                 .ul-review-2 .icon {
                     font-size: clamp(57px, 4.31vw, 82px);
-                    color: #EB5310;
+                    color: oklch(from var(--primary) l c h);
                     display: flex;
                     margin-bottom: clamp(2px, 0.26vw, 5px);
                 }

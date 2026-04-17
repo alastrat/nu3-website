@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
-import { Menu, Heart, MapPin, ChevronDown } from 'lucide-react';
+import { Menu, MapPin, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { CtaButton } from '@/components/ui/cta-button';
@@ -20,16 +20,55 @@ const SOCIAL_LINKS = [
     { href: 'https://www.tiktok.com/@nu3colombia', icon: 'tiktok', label: 'TikTok' },
 ] as const;
 
-const navItems = [
+// Main navigation items (only 4 visible in desktop)
+const mainNavItems = [
+    { href: '/quienes-somos', key: 'about' },
+    {
+        key: 'whatWeDo',
+        children: [
+            { href: '/programas', key: 'programs' },
+            { href: '/proyectos', key: 'projects' },
+            { href: '/eventos', key: 'events' },
+        ],
+    },
+    {
+        key: 'getInvolved',
+        children: [
+            { href: '/apadrina', key: 'sponsor' },
+            { href: '/dona', key: 'donate' },
+            { href: '/blog', key: 'blog' },
+        ],
+    },
+    { href: '/contacto', key: 'contact' },
+] as const;
+
+// Flat list for mobile menu
+const mobileNavItems = [
     { href: '/quienes-somos', key: 'about' },
     { href: '/programas', key: 'programs' },
-    { href: '/huertas-productivas', key: 'gardens' },
-    { href: '/unidades-productivas', key: 'units' },
+    { href: '/proyectos', key: 'projects' },
+    { href: '/eventos', key: 'events' },
     { href: '/apadrina', key: 'sponsor' },
-    { href: '/empresas', key: 'partners' },
+    { href: '/dona', key: 'donate' },
     { href: '/blog', key: 'blog' },
     { href: '/contacto', key: 'contact' },
 ] as const;
+
+type NavItemWithChildren = {
+    key: string;
+    children: readonly { href: string; key: string }[];
+};
+
+type NavItemSimple = {
+    href: string;
+    key: string;
+};
+
+type NavItem = NavItemWithChildren | NavItemSimple;
+
+function hasChildren(item: NavItem): item is NavItemWithChildren {
+    return 'children' in item;
+}
 
 // Social media icon components
 function FacebookIcon({ className }: { className?: string }) {
@@ -91,6 +130,85 @@ function getSocialIcon(icon: string, className?: string) {
     }
 }
 
+// Dropdown component for nav items with children
+function NavDropdown({
+    item,
+    t,
+    pathname,
+}: {
+    item: NavItemWithChildren;
+    t: (key: string) => string;
+    pathname: string;
+}) {
+    const [isOpen, setIsOpen] = useState(false);
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    const handleMouseEnter = () => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+        setIsOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        timeoutRef.current = setTimeout(() => {
+            setIsOpen(false);
+        }, 150);
+    };
+
+    const isChildActive = item.children.some((child) => pathname === child.href);
+
+    return (
+        <div
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            <button
+                className={cn(
+                    'flex items-center gap-1 text-sm font-semibold py-6 transition-colors hover:text-primary',
+                    isChildActive ? 'text-primary' : 'text-[#1E252F]'
+                )}
+                aria-expanded={isOpen}
+                aria-haspopup="true"
+            >
+                {t(item.key)}
+                <ChevronDown
+                    className={cn(
+                        'w-4 h-4 transition-transform duration-200',
+                        isOpen && 'rotate-180'
+                    )}
+                />
+            </button>
+            <div
+                className={cn(
+                    'absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200',
+                    isOpen
+                        ? 'opacity-100 visible translate-y-0'
+                        : 'opacity-0 invisible -translate-y-2'
+                )}
+            >
+                <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2 min-w-[200px]">
+                    {item.children.map((child) => (
+                        <Link
+                            key={child.key}
+                            href={child.href}
+                            className={cn(
+                                'block px-4 py-2.5 text-sm font-medium transition-colors hover:bg-primary/5 hover:text-primary',
+                                pathname === child.href
+                                    ? 'text-primary bg-primary/5'
+                                    : 'text-[#1E252F]'
+                            )}
+                        >
+                            {t(child.key)}
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+
 export function Header() {
     const t = useTranslations('nav');
     const tCta = useTranslations('cta');
@@ -116,7 +234,7 @@ export function Header() {
                     <div className="flex items-center">
                         <div className="relative flex items-center gap-2 py-3 pr-6 text-sm font-medium">
                             {/* Orange background pill */}
-                            <div className="absolute inset-0 -left-8 bg-[#EB5310] rounded-r-full -z-10" />
+                            <div className="absolute inset-0 -left-8 bg-primary rounded-r-full -z-10" />
                             <MapPin className="w-4 h-4 flex-shrink-0" />
                             <span className="hidden sm:inline">Cra. 9E #137-21, Barranquilla, Colombia</span>
                             <span className="sm:hidden">Barranquilla, Colombia</span>
@@ -133,7 +251,7 @@ export function Header() {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-white hover:text-[#EB5310] transition-colors"
+                                    className="text-white hover:text-primary transition-colors"
                                     aria-label={social.label}
                                 >
                                     {getSocialIcon(social.icon, 'w-4 h-4')}
@@ -171,20 +289,29 @@ export function Header() {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden lg:flex items-center gap-8 flex-grow justify-center">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.key}
-                                href={item.href}
-                                className={cn(
-                                    'text-sm font-semibold py-6 transition-colors hover:text-[#EB5310]',
-                                    pathname === item.href
-                                        ? 'text-[#EB5310]'
-                                        : 'text-[#1E252F]'
-                                )}
-                            >
-                                {t(item.key)}
-                            </Link>
-                        ))}
+                        {mainNavItems.map((item) =>
+                            hasChildren(item) ? (
+                                <NavDropdown
+                                    key={item.key}
+                                    item={item}
+                                    t={t}
+                                    pathname={pathname}
+                                />
+                            ) : (
+                                <Link
+                                    key={item.key}
+                                    href={item.href}
+                                    className={cn(
+                                        'text-sm font-semibold py-6 transition-colors hover:text-primary',
+                                        pathname === item.href
+                                            ? 'text-primary'
+                                            : 'text-[#1E252F]'
+                                    )}
+                                >
+                                    {t(item.key)}
+                                </Link>
+                            )
+                        )}
                     </nav>
 
                     {/* Right side actions */}
@@ -230,15 +357,15 @@ export function Header() {
 
                                     {/* Mobile nav items */}
                                     <nav className="flex flex-col">
-                                        {navItems.map((item) => (
+                                        {mobileNavItems.map((item) => (
                                             <Link
                                                 key={item.key}
                                                 href={item.href}
                                                 onClick={() => setIsOpen(false)}
                                                 className={cn(
-                                                    'py-3 text-base font-semibold border-b border-gray-100 transition-colors hover:text-[#EB5310]',
+                                                    'py-3 text-base font-semibold border-b border-gray-100 transition-colors hover:text-primary',
                                                     pathname === item.href
-                                                        ? 'text-[#EB5310]'
+                                                        ? 'text-primary'
                                                         : 'text-[#1E252F]'
                                                 )}
                                             >
@@ -268,7 +395,7 @@ export function Header() {
                                                     href={social.href}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-[#1E252F] hover:text-[#EB5310] transition-colors"
+                                                    className="text-[#1E252F] hover:text-primary transition-colors"
                                                     aria-label={social.label}
                                                 >
                                                     {getSocialIcon(social.icon, 'w-5 h-5')}

@@ -33,7 +33,7 @@ export function EventCard({
                 />
                 {/* Date Badge */}
                 <div className="absolute top-6 left-6 bg-white rounded-xl p-4 text-center shadow-lg">
-                    <div className="text-3xl font-bold text-nu3-orange">{date.day}</div>
+                    <div className="text-3xl font-bold text-primary">{date.day}</div>
                     <div className="text-sm font-medium text-gray-600 uppercase">{date.month}</div>
                 </div>
             </div>
@@ -41,7 +41,7 @@ export function EventCard({
             <div className="p-6">
                 <Link
                     href={`/eventos/${slug}` as any}
-                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-nu3-orange transition-colors line-clamp-2"
+                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-primary transition-colors line-clamp-2"
                 >
                     {title}
                 </Link>
@@ -55,7 +55,7 @@ export function EventCard({
 
                 <Link
                     href={`/eventos/${slug}` as any}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-nu3-orange text-white rounded-full font-semibold hover:bg-nu3-orange-dark transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-colors"
                 >
                     <Calendar className="w-4 h-4" />
                     Ver detalles del evento

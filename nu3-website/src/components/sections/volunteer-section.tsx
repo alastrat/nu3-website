@@ -18,12 +18,12 @@ export function VolunteerSection() {
         <section className="relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
                 {/* Volunteer Column */}
-                <div className="relative bg-[#EB5310] px-8 py-20 lg:px-20 lg:py-28 text-white overflow-hidden">
+                <div className="relative bg-primary px-8 py-20 lg:px-20 lg:py-28 text-white overflow-hidden">
                      {/* Background Image with Overlay */}
-                     <Image 
-                        src="/images/volunteer-bg-1.jpg" 
-                        alt="" 
-                        fill 
+                     <Image
+                        src="/images/real_images/voluntariado.jpg"
+                        alt=""
+                        fill
                         className="object-cover opacity-20 mix-blend-overlay"
                     />
                     <FadeIn direction="left" className="relative z-10">
@@ -55,7 +55,7 @@ export function VolunteerSection() {
                 <div className="relative bg-[#1E252F] px-8 py-20 lg:px-20 lg:py-28 text-white overflow-hidden">
                     {/* Background Image with Overlay */}
                     <Image 
-                        src="/images/donate-form-2-bg.jpg" 
+                        src="/images/real_images/kids_in_table.jpg" 
                         alt="" 
                         fill 
                         className="object-cover opacity-10"
@@ -81,7 +81,7 @@ export function VolunteerSection() {
                                             }}
                                             className={`rounded-full border-2 py-3 text-lg font-bold transition-all ${
                                                 selectedAmount === amount && !customAmount
-                                                    ? 'bg-[#EB5310] border-[#EB5310]'
+                                                    ? 'bg-primary border-primary'
                                                     : 'border-white/20 hover:border-white'
                                             }`}
                                         >

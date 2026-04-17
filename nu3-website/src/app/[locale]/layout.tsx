@@ -97,6 +97,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
+// Theme configuration - "default" (orange/green) or "legacy" (red/green from nu3.co)
+const theme = process.env.NEXT_PUBLIC_THEME || "default";
+
 export default async function LocaleLayout({ children, params }: Props) {
     const { locale } = await params;
 
@@ -112,7 +115,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     const messages = await getMessages();
 
     return (
-        <html lang={locale} suppressHydrationWarning>
+        <html lang={locale} data-theme={theme} suppressHydrationWarning>
             <body
                 className={`${manrope.variable} ${quicksand.variable} font-sans antialiased`}
             >

@@ -78,7 +78,7 @@ export function ServiceCard({
                 }
 
                 .ul-service:hover .ul-service-corner {
-                    background-color: #EB5310;
+                    background-color: oklch(from var(--primary) l c h);
                 }
 
                 .ul-service-img {
@@ -110,7 +110,7 @@ export function ServiceCard({
                 }
 
                 .ul-service-title :global(a:hover) {
-                    color: #EB5310;
+                    color: oklch(from var(--primary) l c h);
                 }
 
                 .ul-service-descr {
@@ -128,7 +128,7 @@ export function ServiceCard({
                     display: inline-flex;
                     align-items: center;
                     font-weight: 700;
-                    color: #EB5310;
+                    color: oklch(from var(--primary) l c h);
                     gap: clamp(10px, 0.79vw, 15px);
                     text-decoration: none;
                     transition: color 0.3s ease;
